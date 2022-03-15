@@ -7,7 +7,6 @@
 
 body {
   min-height: 100px;
-  background: #000;
 }
 
 header {
@@ -21,6 +20,12 @@ header {
   padding: 40px 100px;
   z-index: 1000;
   transition: 0.6s;
+}
+
+header.sticky {
+  padding: 5px 100px;
+  background: #fff;
+  border-bottom: 1px solid(0, 0, 0, 0.1);
 }
 
 header .logo {
@@ -56,8 +61,30 @@ header ul li a {
   transition: 0.6s;
 }
 
+header.sticky .logo,
+header.sticky ul li a {
+  color: #000;
+}
+
 .banner {
   position: relative;
   width: 100%;
   min-height: 100vh;
+  background: url(./img/bg.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h2 {
+  color: #fff;
+  font-size: 90px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1em;
+}
+
+.banner h2 span {
+  color: #6edcd9;
 }
