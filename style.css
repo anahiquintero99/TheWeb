@@ -164,3 +164,19 @@ img {
   justify-content: center;
   align-items: center;
 }
+
+/* Footer*/
+.copyright {
+  background: var(--black-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright p {
+  color: var(--white-color);
+}
+
+.copyright p span {
+  color: #6edcd9;
+}
