@@ -65,7 +65,7 @@ header ul li {
 
 header ul li a {
   position: relative;
-  margin: 0 20px;
+  margin: 0 15px;
   text-decoration: none;
   color: var(--white-color);
   letter-spacing: 5px;
@@ -179,4 +179,77 @@ img {
 
 .copyright p span {
   color: #6edcd9;
+}
+
+.toggle {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .toggle {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .toggle:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    height: 2px;
+    background: var(--black-color);
+    z-index: 1;
+    box-shadow: 0 10px 0 var(--black-color);
+    transition: 0.5s;
+  }
+
+  .toggle:after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: 2px;
+    background: var(--black-color);
+    z-index: 1;
+    transition: 0.5s;
+  }
+
+  header {
+    padding: 5px 50px;
+    background: var(--white-color);
+  }
+
+  header ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: auto;
+    background: var(--white-color);
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  header.active ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    padding-top: 25px;
+  }
+
+  header.active ul li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 20px;
+  }
+
+  header .logo,
+  header ul li a {
+    color: var(--black-color);
+  }
 }
